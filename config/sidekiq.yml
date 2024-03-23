@@ -1,0 +1,8 @@
+:queues:
+  - default
+:scheduler:
+  :enabled: true
+  :schedule:
+    update_counts_job:
+      every: ['10s']
+      class: UpdateCountsJob
