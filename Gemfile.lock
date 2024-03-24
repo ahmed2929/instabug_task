@@ -89,6 +89,7 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
+    foreman (0.87.2)
     fugit (1.10.1)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
@@ -223,6 +224,7 @@ DEPENDENCIES
   byebug
   elasticsearch-model
   elasticsearch-rails
+  foreman
   listen (~> 3.3)
   mysql2 (~> 0.5)
   puma (~> 5.0)

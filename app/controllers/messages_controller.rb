@@ -69,6 +69,8 @@ class MessagesController < ApplicationController
 
     if application
       @chat = Chat.find_by(number: params[:chatId], application_id: application.id)
+      raise ActiveRecord::RecordNotFound, 'Chat not found' unless @chat
+
     else
       render json: { error: 'Application not found' }, status: :not_found
     end

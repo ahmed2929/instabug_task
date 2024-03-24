@@ -1,0 +1,32 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: bash -c "while !</dev/tcp/db/3306; do sleep 35; done; bundle exec rake db:migrate && foreman start -f Procfile"
+    volumes:
+      - .:/myapp
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+      - redis
+      - elasticsearch
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=mysql2://root:password@db/myapp
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=myapp
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis:latest
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
