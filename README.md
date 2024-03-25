@@ -1,4 +1,4 @@
-# please note that this is the first time to use ruby on rails so the code may not follow the industry standers
+# Please note that this is the first time to use ruby on rails so the code may not follow the industry standards
 # Chat Application High-Level System Design
 ![Chat Application Design](./chat.jpg)
 ## Overview
