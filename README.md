@@ -54,7 +54,7 @@ The system follows a decentralized architecture where each service operates inde
 
 - **Scalability**: Each service can scale independently based on demand.
 - **Fault Tolerance**: Decentralized architecture minimizes the impact of failures.
-- **Performance**: Caching with Redis and indexing with Elastic Search optimize data access.
+- **Performance**: Caching with Redis and indexing with Elastic Search to optimize data access.
 - **Maintainability**: Microservices enable easier maintenance and updates.
 - **Modularity**: Each service encapsulates specific functionalities, promoting code reusability and easier debugging.
 
@@ -125,9 +125,9 @@ The Dockerfile is configured to build an image for the Rails application. It set
 
 The `docker-compose.yml` file defines services for the Rails application, MySQL, Redis, and Elastic. It orchestrates these services and allows easy management and scaling of containers.
 ## TODO
--add authorization and authentication
--add proper error handing mechanism
--add cashing layer to messages and chats
+-**Add authorization and authentication**
+-**Add proper error handling mechanism**
+-**Add cashing layer to messages and chats**
 ## Conclusion
 
 This monolithic chat application provides a basic implementation of chat functionalities using Rails, MySQL, Redis, background jobs, and Elastic. By containerizing the application with Docker, it ensures consistency and ease of deployment across different environments.
