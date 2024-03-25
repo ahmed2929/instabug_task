@@ -97,8 +97,9 @@ Make sure you have Docker installed on your system.
     ```bash
     docker-compose up
     ```
+5. wait 10s before accessing the application so that the database is initialized and tables are migrated.
 
-5. Access the application in your web browser at `http://localhost:4000`.
+6. Access the application in your web browser at `http://localhost:4000`.
 
 ### Accessing Postman REST APIs Collection
 
