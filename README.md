@@ -125,9 +125,9 @@ The Dockerfile is configured to build an image for the Rails application. It set
 
 The `docker-compose.yml` file defines services for the Rails application, MySQL, Redis, and Elastic. It orchestrates these services and allows easy management and scaling of containers.
 ## TODO
--**Add authorization and authentication**
--**Add proper error handling mechanism**
--**Add cashing layer to messages and chats**
+- **Add authorization and authentication**
+- **Add proper error handling mechanism**
+- **Add cashing layer to messages and chats**
 ## Conclusion
 
 This monolithic chat application provides a basic implementation of chat functionalities using Rails, MySQL, Redis, background jobs, and Elastic. By containerizing the application with Docker, it ensures consistency and ease of deployment across different environments.
